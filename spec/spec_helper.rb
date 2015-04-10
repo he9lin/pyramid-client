@@ -4,7 +4,7 @@ require 'pyramid-client'
 require 'vcr'
 
 VCR.configure do |c|
-  c.cassette_library_dir = 'fixtures/cassettes'
+  c.cassette_library_dir = 'spec/vcr'
   c.hook_into :faraday
 end
 

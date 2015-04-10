@@ -13,6 +13,11 @@ gem 'pyramid-client'
 ## Usage example
 
 ```ruby
+Pyramid.configure do |config|
+  config.app_id     app_id
+  config.app_secret app_secret
+end
+
 client = Pyramid::Client.new(app_id, app_secret)
 
 entity = Pyramid::Entity.new('xyz123', client)

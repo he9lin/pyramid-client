@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3000/api/entities/yell-1/add_points
+    body:
+      encoding: UTF-8
+      string: '{ "amount": 100 }'
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Content-Type:
+      - application/json
+      Accept:
+      - application/vnd.heyook.v1
+      Content-Digest:
+      - a4c2a9c196502bda4f9fa0a6ed3b40eb
+      Date:
+      - Fri, 10 Apr 2015 20:01:42 GMT
+      Authorization:
+      - EyHmac 88480333:NlftOrXRvvxhNZLmmBrwG5FqhWbGJ1udp60mCCDCPVg=
+  response:
+    status:
+      code: 201
+      message: 
+    headers:
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      content-type:
+      - application/json; charset=utf-8
+      etag:
+      - W/"9c5e832eb3477e356f0bf013bb169959"
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 522cba15-129a-4643-8290-27d83a9cdffa
+      x-runtime:
+      - '0.058862'
+      server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
+      date:
+      - Fri, 10 Apr 2015 20:01:42 GMT
+      content-length:
+      - '49'
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"entity":{"id":1,"uname":"yell-1","points":800}}'
+    http_version: 
+  recorded_at: Fri, 10 Apr 2015 20:01:42 GMT
+recorded_with: VCR 2.9.3
