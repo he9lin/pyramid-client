@@ -1,6 +1,6 @@
 # Pyramid client
 
-A client to access pyramid lib API. (functional style :p)
+A client to access pyramid lib API. (RESTful)
 
 ## Installation
 
