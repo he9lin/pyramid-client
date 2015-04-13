@@ -1,52 +1,75 @@
 module Pyramid
-  module ApiRepo
-    extend self
+  class ApiRepo
+    DEFAULT_OPTS = {
+      api_prefix: '/api'
+    }
+
+    attr_reader :key, :opts, :serializer, :adapter
+
+    def initialize(key, opts={})
+      @key  = key
+      @opts = opts.merge DEFAULT_OPTS
+      @serializer = Serializer.new(key)
+      @adapter = -> (params) { {key => params} }
+      path_interpolater = PathInterpolater.new(path_prefix)
+      @rest_path_builder = -> (params) {
+        [
+          api_prefix,
+          path_interpolater.(params),
+          key.pluralize
+        ].compact.join('/')
+      }
+    end
 
     def api_prefix
-      '/api'
+      opts[:api_prefix]
     end
 
-    def custom(custom_path, key, id, amount)
-      path = [build_single_resource_path(key, id), custom_path].join('/')
-
-      {amount: amount}
-        .pipe(api_call(path, :post))
-        .pipe(serializer(key))
-        .first
+    def path_prefix
+      opts[:path_prefix]
     end
 
-    def create(key, params)
-      path = rest_path(key)
+    def custom(custom_path, id, params)
+      path = [single_resource_path(id), custom_path].join('/')
 
       params
-        .pipe(adapter(key))
         .pipe(api_call(path, :post))
-        .pipe(serializer(key))
+        .pipe(serializer)
     end
 
-    def update(key, id, params)
-      path = build_single_resource_path(key, id)
+    def create(params)
+      path = rest_path(params)
 
       params
-        .pipe(adapter(key))
+        .pipe(adapter)
+        .pipe(api_call(path, :post))
+        .pipe(serializer)
+    end
+
+    def update(id, params)
+      path = single_resource_path(id, params)
+
+      params
+        .pipe(adapter)
         .pipe(api_call(path, :put))
     end
 
-    def find(key, id)
-      path = build_single_resource_path(key, id)
+    def find(id, params={})
+      path = single_resource_path(id, params)
 
       api(path)
-        .pipe(serializer(key))
+        .pipe(serializer)
     end
 
-    def findAll(key, opts={})
-      path = rest_path(key)
-      api(path, opts)
-        .pipe(serializer(key.pluralize))
+    def findAll(params={})
+      serializer = Serializer.new(key.pluralize)
+
+      api(rest_path, params)
+        .pipe(serializer)
     end
 
-    def destroy(key, id)
-      path = build_single_resource_path(key, id)
+    def destroy(id)
+      path = single_resource_path(id)
 
       api(path, nil, method: :delete)
     end
@@ -57,26 +80,16 @@ module Pyramid
       Pyramid.client.api(*args)
     end
 
-    def build_single_resource_path(key, id)
-      [rest_path(key), id].join('/')
-    end
-
-    def serializer(key)
-      -> (params) {
-        Array.wrap(params[key]).map(&:symbolize_keys)
-      }
-    end
-
-    def adapter(key)
-      -> (params) { {key => params} }
-    end
-
     def api_call(path, method)
       -> (params) { api(path, params, method: method) }
     end
 
-    def rest_path(key)
-      [api_prefix, key.pluralize].join('/')
+    def single_resource_path(id, params={})
+      [rest_path(params), id].join('/')
+    end
+
+    def rest_path(params={})
+      @rest_path_builder.(params)
     end
   end
 end

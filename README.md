@@ -26,10 +26,14 @@ entity = Pyramid::Entity.find('xyz123')
 entity.add_points(100)
 
 # RESTful
-entity_action = Pyramid::EntityAction.create(name: "tweet", value: 100)
-entity_action.update name: "retweet"
+entity_action = Pyramid::EntityAction.new(name: "tweet", value: 100)
+entity_action.save
+entity_action.name = "retweet"
 entity_action.save
 entity_action.destroy
+
+reward_item = Pyramid::RewardItem.new(entity_id: entity_id, reward_id: reward_id)
+reward_item.save
 ```
 
 ## TODO

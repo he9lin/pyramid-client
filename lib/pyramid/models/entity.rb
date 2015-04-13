@@ -7,8 +7,8 @@ module Pyramid
     property :points
 
     def add_points(amount)
-      attrs = ApiRepo.custom('add_points', key, to_param, amount)
-      update_attributes! attrs.symbolize_keys
+      api_repo.custom('add_points', to_param, {amount: amount})
+        .map { |h| update_attributes! h }
     end
 
     def to_param

@@ -11,6 +11,8 @@ require 'ey-hmac/faraday'
 
 require 'pyramid/version'
 require 'pyramid/core_ext/pipe'
+require 'pyramid/path_interpolater'
+require 'pyramid/serializer'
 require 'pyramid/client'
 require 'pyramid/api_repo'
 
@@ -18,6 +20,7 @@ require 'pyramid/model'
 require 'pyramid/models/entity'
 require 'pyramid/models/entity_action'
 require 'pyramid/models/reward'
+require 'pyramid/models/reward_item'
 
 module Pyramid
   class << self
