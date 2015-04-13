@@ -34,6 +34,9 @@ entity_action.destroy
 
 reward_item = Pyramid::RewardItem.new(entity_id: entity_id, reward_id: reward_id)
 reward_item.save
+
+event = Pyramid::ActionEvent.new entity_name: 'yell-1', action_name: "checkin"
+event.save
 ```
 
 ## TODO
