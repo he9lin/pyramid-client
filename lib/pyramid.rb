@@ -1,4 +1,7 @@
 require 'ostruct'
+require 'active_support/core_ext/hash/keys'
+require 'active_support/inflector'
+require 'active_support/concern'
 require 'faraday'
 require 'json'
 require 'hashie/dash'
@@ -8,6 +11,8 @@ require 'ey-hmac/faraday'
 require 'pyramid/version'
 require 'pyramid/ext'
 require 'pyramid/client'
+require 'pyramid/model'
+require 'pyramid/api_repo'
 require 'pyramid/entity_action'
 
 module Pyramid

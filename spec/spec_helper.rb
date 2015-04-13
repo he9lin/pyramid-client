@@ -9,6 +9,7 @@ VCR.configure do |c|
 end
 
 Pyramid.configure do |c|
+  c.api_root   = 'http://localhost:3000'
   c.app_key    = '88480333'
   c.app_secret = '72fd96a2e4c9c2a9129f96a21bfb7012'
 end

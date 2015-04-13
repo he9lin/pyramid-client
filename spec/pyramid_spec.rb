@@ -24,7 +24,7 @@ describe Pyramid do
     client = Pyramid.client
 
     VCR.use_cassette 'app_points' do
-      response_json = client.api '/api/entities/yell-1/add_points', { amount: 100 }
+      response_json = client.api '/api/entities/yell-1/add_points', { amount: 100 }, method: :post
       entity_json = response_json['entity']
       expect(entity_json).to have_key('id')
       expect(entity_json).to have_key('points')
@@ -37,6 +37,7 @@ describe Pyramid do
       VCR.use_cassette 'entity_action/create' do
         action = described_class.new name: 'retweet', value: 100
         action.save
+        expect(action).to be_persisted
       end
     end
   end
