@@ -34,4 +34,5 @@ entity_action.destroy
 
 ## TODO
 
+* Deal with error cases: display error result instead of nil
 * Refactor `Hashie::Dash` out into module for models

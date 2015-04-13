@@ -17,6 +17,15 @@ describe Pyramid::Entity do
         expect(entity.uname).to eq('yell-1')
       end
     end
+
+    context 'not found' do
+      it 'returns nil' do
+        VCR.use_cassette 'entities/not_found' do
+          entity = described_class.find('invalid')
+          expect(entity).to be_nil
+        end
+      end
+    end
   end
 
   describe 'add points to entity' do
