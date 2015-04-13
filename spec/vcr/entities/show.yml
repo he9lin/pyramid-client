@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/entities/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Content-Type:
+      - application/json
+      Accept:
+      - application/vnd.heyook.v1
+      Date:
+      - Mon, 13 Apr 2015 17:51:56 GMT
+      Authorization:
+      - EyHmac 88480333:6KtHakIJHcR3DUkuJL7xIkYbzYeotaN1nkGR7qUF6hM=
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      content-type:
+      - application/json; charset=utf-8
+      etag:
+      - W/"6a4f828ab3243a7ddf41c18b3d2ad76d"
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - dc2380f7-9280-418e-84f0-207535f7a73c
+      x-runtime:
+      - '0.039818'
+      server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
+      date:
+      - Mon, 13 Apr 2015 17:51:56 GMT
+      content-length:
+      - '49'
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"entity":{"id":1,"uname":"yell-1","points":900}}'
+    http_version: 
+  recorded_at: Mon, 13 Apr 2015 17:51:56 GMT
+recorded_with: VCR 2.9.3

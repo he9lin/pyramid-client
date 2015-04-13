@@ -4,16 +4,16 @@ module Pyramid
 
     def save
       if new_record?
-        attrs = ApiRepo.create key, to_hash
-        update_attributes! attrs.symbolize_keys
+        ApiRepo.create(key, to_hash)
+          .map { |h| update_attributes! h }
       else
-        ApiRepo.update key, id, to_hash # true of false depending on error
+        ApiRepo.update key, to_param, to_hash # true of false depending on error
       end
     end
 
     def destroy
       if persisted?
-        ApiRepo.destroy key, id
+        ApiRepo.destroy key, to_param
       end
     end
 
@@ -29,6 +29,10 @@ module Pyramid
       self.class.key
     end
 
+    def to_param
+      id
+    end
+
     module ClassMethods
       def key
         "#{self.to_s.underscore}".split('/').last
@@ -36,8 +40,13 @@ module Pyramid
 
       def find(id)
         ApiRepo.find(key, id)
-          .symbolize_keys
-          .pipe { |hash| new(hash) }
+          .map { |h| new(h) }
+          .first
+      end
+
+      def findAll(opts={})
+        ApiRepo.findAll(key, opts)
+          .map { |h| new(h) }
       end
     end
   end

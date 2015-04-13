@@ -1,6 +1,6 @@
 # Pyramid client
 
-A client to access pyramid lib API.
+A client to access pyramid lib API. (functional style :p)
 
 ## Installation
 
@@ -20,10 +20,8 @@ Pyramid.configure do |c|
 end
 
 client = Pyramid::Client.new(app_id, app_secret)
-
-entity = Pyramid::Entity.new('xyz123', client)
+entity = Pyramid::Entity.new(uname: 'xyz123')
 entity.add_points(100)
-
 entity = Pyramid::Entity.find('xyz123')
 entity.add_points(100)
 
@@ -33,3 +31,7 @@ entity_action.update name: "retweet"
 entity_action.save
 entity_action.destroy
 ```
+
+## TODO
+
+* Refactor `Hashie::Dash` out into module for models
