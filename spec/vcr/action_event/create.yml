@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3000/api/entities/yell-1/action_events
+    body:
+      encoding: UTF-8
+      string: '{"action_event":{"entity_name":"yell-1","action_name":"checkin"}}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Content-Type:
+      - application/json
+      Accept:
+      - application/vnd.heyook.v1
+      Content-Digest:
+      - d3adac484a2b86821928ee0dac34036d
+      Date:
+      - Mon, 13 Apr 2015 23:52:31 GMT
+      Authorization:
+      - EyHmac 88480333:os/o3kLLB09uBZCuv7A6r9jJ77IuWXCIyBNPKJrY0v8=
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      content-type:
+      - application/json; charset=utf-8
+      etag:
+      - W/"415117d937398d54817434c671018922"
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - efcc76e1-e27f-4c47-a46b-014ec280333a
+      x-runtime:
+      - '0.572399'
+      server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
+      date:
+      - Mon, 13 Apr 2015 23:39:26 GMT
+      content-length:
+      - '72'
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"action_event":{"id":1,"action_name":"checkin","entity_name":"yell-1"}}'
+    http_version: 
+  recorded_at: Mon, 13 Apr 2015 23:52:31 GMT
+recorded_with: VCR 2.9.3

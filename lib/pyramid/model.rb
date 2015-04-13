@@ -9,6 +9,7 @@ module Pyramid
       else
         api_repo.update to_param, to_hash # true of false depending on error
       end
+      self
     end
 
     def destroy

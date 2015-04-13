@@ -7,6 +7,9 @@ module Pyramid
         req.headers['Accept']       = 'application/vnd.heyook.v1'
         req.body = body
       end
+    rescue Faraday::Error::ConnectionFailed => e
+      # TODO: properly handle error
+      nil
     end
   end
 end

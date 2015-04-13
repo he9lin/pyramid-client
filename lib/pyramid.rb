@@ -21,6 +21,7 @@ require 'pyramid/models/entity'
 require 'pyramid/models/entity_action'
 require 'pyramid/models/reward'
 require 'pyramid/models/reward_item'
+require 'pyramid/models/action_event'
 
 module Pyramid
   class << self
