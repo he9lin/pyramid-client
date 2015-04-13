@@ -4,7 +4,7 @@ require 'pyramid/json_response'
 
 module Pyramid
   Client = Struct.new(:config) do
-    def api(url, body, opts={})
+    def api(url, body=nil, opts={})
       method = opts.fetch(:method, :get)
       Connection.call(config.api_root, config.app_key, config.app_secret)
         .pipe { |conn| Request.call(conn, url, body, method) }

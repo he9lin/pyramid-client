@@ -1,0 +1,101 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/entity_actions/2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Content-Type:
+      - application/json
+      Accept:
+      - application/vnd.heyook.v1
+      Date:
+      - Mon, 13 Apr 2015 03:59:07 GMT
+      Authorization:
+      - EyHmac 88480333:t6rJq96P6MxgVP9/YNsLXNNHo+5rzQoIHxcTgY2T188=
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      content-type:
+      - application/json; charset=utf-8
+      etag:
+      - W/"44bcee2eeebd621f5425c4b963f52325"
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 24ba1350-e556-46d2-81f7-a8383e4f5a5f
+      x-runtime:
+      - '0.039411'
+      server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
+      date:
+      - Mon, 13 Apr 2015 03:59:07 GMT
+      content-length:
+      - '55'
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"entity_action":{"id":2,"name":"retweet","value":100}}'
+    http_version: 
+  recorded_at: Mon, 13 Apr 2015 03:59:07 GMT
+- request:
+    method: put
+    uri: http://localhost:3000/api/entity_actions/2
+    body:
+      encoding: UTF-8
+      string: '{"entity_action":{"id":2,"name":"retweet-2","value":100}}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Content-Type:
+      - application/json
+      Accept:
+      - application/vnd.heyook.v1
+      Content-Digest:
+      - 17e2fd20b10fb677dde4eeedc47efd63
+      Date:
+      - Mon, 13 Apr 2015 03:59:07 GMT
+      Authorization:
+      - EyHmac 88480333:3Stw6ZoZG8qghIuFf/ItuNgl/ofCANPE8cMF70mQeEY=
+  response:
+    status:
+      code: 204
+      message: 
+    headers:
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      cache-control:
+      - no-cache
+      x-request-id:
+      - 4e8e5e15-da07-42dc-a6c3-01978e8d0d4f
+      x-runtime:
+      - '0.128246'
+      server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
+      date:
+      - Mon, 13 Apr 2015 03:59:07 GMT
+      connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: 
+  recorded_at: Mon, 13 Apr 2015 03:59:07 GMT
+recorded_with: VCR 2.9.3
