@@ -4,7 +4,7 @@ module Pyramid
       api_prefix: '/api'
     }
 
-    attr_reader :key, :opts, :serializer, :adapter
+    attr_reader :key, :opts, :serializer, :adapter, :rest_path_builder
 
     def initialize(key, opts={})
       @key  = key
@@ -89,7 +89,7 @@ module Pyramid
     end
 
     def rest_path(params={})
-      @rest_path_builder.(params)
+      rest_path_builder.(params)
     end
   end
 end
