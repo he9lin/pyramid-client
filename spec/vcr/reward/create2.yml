@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3000/api/rewards
+    body:
+      encoding: UTF-8
+      string: '{"reward":{"name":"Apple Coupon","description":"20% off","cost":100}}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Content-Type:
+      - application/json
+      Accept:
+      - application/vnd.heyook.v1
+      Content-Digest:
+      - 3b4dfe4f7e14e22b300230beaa20e290
+      Date:
+      - Mon, 13 Apr 2015 18:47:19 GMT
+      Authorization:
+      - EyHmac 88480333:byzPlG3cD5OQKM5wtQYQ2HaNYBdry0yUeJ/kLoSfilU=
+  response:
+    status:
+      code: 201
+      message: 
+    headers:
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      content-type:
+      - application/json; charset=utf-8
+      etag:
+      - W/"6566be523b5e8d1351633976d1ff3285"
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 3111a4f0-b367-4aea-8a36-24eeecdd9abe
+      x-runtime:
+      - '0.078420'
+      server:
+      - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
+      date:
+      - Mon, 13 Apr 2015 18:47:19 GMT
+      content-length:
+      - '76'
+      connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"reward":{"id":2,"name":"Apple Coupon","cost":100,"description":"20%
+        off"}}'
+    http_version: 
+  recorded_at: Mon, 13 Apr 2015 18:47:19 GMT
+recorded_with: VCR 2.9.3

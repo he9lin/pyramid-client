@@ -10,12 +10,14 @@ require 'faraday_middleware'
 require 'ey-hmac/faraday'
 
 require 'pyramid/version'
-require 'pyramid/ext'
+require 'pyramid/core_ext/pipe'
 require 'pyramid/client'
-require 'pyramid/model'
 require 'pyramid/api_repo'
-require 'pyramid/entity'
-require 'pyramid/entity_action'
+
+require 'pyramid/model'
+require 'pyramid/models/entity'
+require 'pyramid/models/entity_action'
+require 'pyramid/models/reward'
 
 module Pyramid
   class << self

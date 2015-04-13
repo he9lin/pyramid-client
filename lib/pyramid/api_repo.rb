@@ -2,7 +2,7 @@ module Pyramid
   module ApiRepo
     extend self
 
-    def prefix
+    def api_prefix
       '/api'
     end
 
@@ -76,7 +76,7 @@ module Pyramid
     end
 
     def rest_path(key)
-      [prefix, key.pluralize].join('/')
+      [api_prefix, key.pluralize].join('/')
     end
   end
 end
