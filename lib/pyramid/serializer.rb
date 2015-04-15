@@ -1,11 +1,15 @@
 module Pyramid
-  module Serializer
-    def self.call(key, params)
+  class Serializer
+    def initialize(key)
+      @key = key
+    end
+
+    def call(params)
       Array.wrap(params[key]).map(&:symbolize_keys)
     end
 
-    def self.new(key)
-      method(:call).curry[key]
-    end
+    private
+
+    attr_reader :key
   end
 end
