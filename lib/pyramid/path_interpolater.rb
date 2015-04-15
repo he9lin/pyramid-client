@@ -9,11 +9,12 @@ module Pyramid
     def call(params)
       return nil unless path
       matches = path.scan REGEXP
+      result  = path.dup
       matches.each do |m|
         m = m[1..-1].to_sym
-        self.path = path.sub(REGEXP, params[m].to_s)
+        result = result.sub(REGEXP, params[m].to_s)
       end
-      path
+      result
     end
 
     def initialize(path)
