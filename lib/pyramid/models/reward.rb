@@ -6,5 +6,6 @@ module Pyramid
     property :name
     property :description
     property :cost
+    property :image_url
   end
 end

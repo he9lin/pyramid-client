@@ -2,21 +2,19 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/entity_actions/2
+    uri: http://localhost:3000/api/entity_actions/4
     body:
       encoding: US-ASCII
       string: ''
     headers:
+      Authorization:
+      - Token token="88480333.72fd96a2e4c9c2a9129f96a21bfb7012"
       User-Agent:
       - Faraday v0.8.9
       Content-Type:
       - application/json
       Accept:
       - application/vnd.heyook.v1
-      Date:
-      - Mon, 13 Apr 2015 03:23:16 GMT
-      Authorization:
-      - EyHmac 88480333:YQ3boEwCN3fkRJhBISjbrFQwut1r1fOHNMjPof7v7g4=
   response:
     status:
       code: 200
@@ -31,24 +29,24 @@ http_interactions:
       content-type:
       - application/json; charset=utf-8
       etag:
-      - W/"44bcee2eeebd621f5425c4b963f52325"
+      - W/"939fd2f613c09e8df7a0595fb50df92d"
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 16b1e672-ac12-4789-bccc-7300e02bf00b
+      - d9067862-191a-4828-bba7-d7e9849e942f
       x-runtime:
-      - '0.561522'
+      - '0.038388'
       server:
       - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
       date:
-      - Mon, 13 Apr 2015 03:23:17 GMT
+      - Thu, 16 Apr 2015 22:25:40 GMT
       content-length:
       - '55'
       connection:
       - close
     body:
       encoding: UTF-8
-      string: '{"entity_action":{"id":2,"name":"retweet","value":100}}'
+      string: '{"entity_action":{"id":4,"name":"retweet","value":100}}'
     http_version: 
-  recorded_at: Mon, 13 Apr 2015 03:23:17 GMT
+  recorded_at: Thu, 16 Apr 2015 22:25:40 GMT
 recorded_with: VCR 2.9.3

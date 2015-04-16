@@ -7,18 +7,14 @@ http_interactions:
       encoding: UTF-8
       string: '{"reward_item":{"entity_id":1,"reward_id":2}}'
     headers:
+      Authorization:
+      - Token token="88480333.72fd96a2e4c9c2a9129f96a21bfb7012"
       User-Agent:
       - Faraday v0.8.9
       Content-Type:
       - application/json
       Accept:
       - application/vnd.heyook.v1
-      Content-Digest:
-      - 1bbc405180f66fe10a1e860a50a7036e
-      Date:
-      - Mon, 13 Apr 2015 22:53:55 GMT
-      Authorization:
-      - EyHmac 88480333:akrNGegj9v3PAXowdO4zyYy++o7eUYPSCAiJ/GZYBUk=
   response:
     status:
       code: 422
@@ -35,13 +31,13 @@ http_interactions:
       cache-control:
       - no-cache
       x-request-id:
-      - 090f55f6-bea1-4c51-b346-826230c10c3d
+      - 133bc7d6-8bc9-46f3-8561-133fdac0f256
       x-runtime:
-      - '0.056041'
+      - '0.040473'
       server:
       - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
       date:
-      - Mon, 13 Apr 2015 22:40:48 GMT
+      - Thu, 16 Apr 2015 22:22:32 GMT
       content-length:
       - '47'
       connection:
@@ -50,5 +46,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"errors":"Couldn''t find Reward without an ID"}'
     http_version: 
-  recorded_at: Mon, 13 Apr 2015 22:53:55 GMT
+  recorded_at: Thu, 16 Apr 2015 22:22:32 GMT
 recorded_with: VCR 2.9.3
