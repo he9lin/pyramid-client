@@ -7,18 +7,14 @@ http_interactions:
       encoding: UTF-8
       string: '{"action_event":{"entity_name":"yell-1","action_name":"checkin"}}'
     headers:
+      Authorization:
+      - Token token="88480333.72fd96a2e4c9c2a9129f96a21bfb7012"
       User-Agent:
       - Faraday v0.8.9
       Content-Type:
       - application/json
       Accept:
       - application/vnd.heyook.v1
-      Content-Digest:
-      - d3adac484a2b86821928ee0dac34036d
-      Date:
-      - Mon, 13 Apr 2015 23:52:31 GMT
-      Authorization:
-      - EyHmac 88480333:os/o3kLLB09uBZCuv7A6r9jJ77IuWXCIyBNPKJrY0v8=
   response:
     status:
       code: 200
@@ -33,24 +29,24 @@ http_interactions:
       content-type:
       - application/json; charset=utf-8
       etag:
-      - W/"415117d937398d54817434c671018922"
+      - W/"df32adb41086dc492be1719cd7f51717"
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - efcc76e1-e27f-4c47-a46b-014ec280333a
+      - 89b3a270-006e-4ff0-8c78-285e572c8338
       x-runtime:
-      - '0.572399'
+      - '0.657784'
       server:
       - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
       date:
-      - Mon, 13 Apr 2015 23:39:26 GMT
+      - Thu, 16 Apr 2015 22:22:31 GMT
       content-length:
       - '72'
       connection:
       - close
     body:
       encoding: UTF-8
-      string: '{"action_event":{"id":1,"action_name":"checkin","entity_name":"yell-1"}}'
+      string: '{"action_event":{"id":2,"action_name":"checkin","entity_name":"yell-1"}}'
     http_version: 
-  recorded_at: Mon, 13 Apr 2015 23:52:31 GMT
+  recorded_at: Thu, 16 Apr 2015 22:22:31 GMT
 recorded_with: VCR 2.9.3

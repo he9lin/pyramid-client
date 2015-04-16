@@ -2,21 +2,19 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:3000/api/entity_actions/2
+    uri: http://localhost:3000/api/entity_actions/4
     body:
       encoding: US-ASCII
       string: ''
     headers:
+      Authorization:
+      - Token token="88480333.72fd96a2e4c9c2a9129f96a21bfb7012"
       User-Agent:
       - Faraday v0.8.9
       Content-Type:
       - application/json
       Accept:
       - application/vnd.heyook.v1
-      Date:
-      - Mon, 13 Apr 2015 05:05:28 GMT
-      Authorization:
-      - EyHmac 88480333:cfWSG8CkHNGR3HslclFXEQJIdLf/O46BWtH2366ec9Q=
   response:
     status:
       code: 200
@@ -31,43 +29,41 @@ http_interactions:
       content-type:
       - application/json; charset=utf-8
       etag:
-      - W/"17e2fd20b10fb677dde4eeedc47efd63"
+      - W/"e8d98ef0f8c8f0c3303e996d4fa1a222"
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 95f5584b-d930-4e01-89b9-9d55ce72edbc
+      - 290e0f7c-727c-4363-8e4e-580b3711edf2
       x-runtime:
-      - '0.038474'
+      - '0.019919'
       server:
       - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
       date:
-      - Mon, 13 Apr 2015 05:05:28 GMT
+      - Thu, 16 Apr 2015 22:26:02 GMT
       content-length:
       - '57'
       connection:
       - close
     body:
       encoding: UTF-8
-      string: '{"entity_action":{"id":2,"name":"retweet-2","value":100}}'
+      string: '{"entity_action":{"id":4,"name":"retweet-2","value":100}}'
     http_version: 
-  recorded_at: Mon, 13 Apr 2015 05:05:28 GMT
+  recorded_at: Thu, 16 Apr 2015 22:26:02 GMT
 - request:
     method: delete
-    uri: http://localhost:3000/api/entity_actions/2
+    uri: http://localhost:3000/api/entity_actions/4
     body:
       encoding: US-ASCII
       string: ''
     headers:
+      Authorization:
+      - Token token="88480333.72fd96a2e4c9c2a9129f96a21bfb7012"
       User-Agent:
       - Faraday v0.8.9
       Content-Type:
       - application/json
       Accept:
       - application/vnd.heyook.v1
-      Date:
-      - Mon, 13 Apr 2015 05:05:28 GMT
-      Authorization:
-      - EyHmac 88480333:4ZUujlVr13mGXVQZc/BSTAYAr/x26DWc+xJo764Lb5Q=
   response:
     status:
       code: 200
@@ -84,13 +80,13 @@ http_interactions:
       cache-control:
       - no-cache
       x-request-id:
-      - 41c4ed29-8293-4b89-ac5d-432477af40a2
+      - 4c242541-e120-4573-bf41-c0842aaf0d39
       x-runtime:
-      - '0.176564'
+      - '0.043235'
       server:
       - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
       date:
-      - Mon, 13 Apr 2015 05:05:29 GMT
+      - Thu, 16 Apr 2015 22:26:02 GMT
       content-length:
       - '0'
       connection:
@@ -99,5 +95,5 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Mon, 13 Apr 2015 05:05:29 GMT
+  recorded_at: Thu, 16 Apr 2015 22:26:02 GMT
 recorded_with: VCR 2.9.3

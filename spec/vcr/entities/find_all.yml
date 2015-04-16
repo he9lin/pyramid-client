@@ -7,18 +7,14 @@ http_interactions:
       encoding: UTF-8
       string: '{"unames":["yell-1"]}'
     headers:
+      Authorization:
+      - Token token="88480333.72fd96a2e4c9c2a9129f96a21bfb7012"
       User-Agent:
       - Faraday v0.8.9
       Content-Type:
       - application/json
       Accept:
       - application/vnd.heyook.v1
-      Content-Digest:
-      - 31cc2e8786eac370e912b742ca532088
-      Date:
-      - Mon, 13 Apr 2015 17:58:51 GMT
-      Authorization:
-      - EyHmac 88480333:xjHH06FqQcCY6bTGTs/6ZEgzlMMBdf7aYjBnZ1H6wog=
   response:
     status:
       code: 200
@@ -33,24 +29,24 @@ http_interactions:
       content-type:
       - application/json; charset=utf-8
       etag:
-      - W/"2f7cf98455debd7726e3057c34ac54f5"
+      - W/"c9fcde49a1d2cbb99e07c1a491b63420"
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 1322dafc-23f6-4097-a30c-b8561fe1c3ae
+      - 608031a6-cacc-455c-9f0e-66f1fcc700f4
       x-runtime:
-      - '0.046513'
+      - '0.048801'
       server:
       - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
       date:
-      - Mon, 13 Apr 2015 17:58:51 GMT
+      - Thu, 16 Apr 2015 22:22:31 GMT
       content-length:
-      - '53'
+      - '54'
       connection:
       - close
     body:
       encoding: UTF-8
-      string: '{"entities":[{"id":1,"uname":"yell-1","points":900}]}'
+      string: '{"entities":[{"id":1,"uname":"yell-1","points":1000}]}'
     http_version: 
-  recorded_at: Mon, 13 Apr 2015 17:58:51 GMT
+  recorded_at: Thu, 16 Apr 2015 22:22:31 GMT
 recorded_with: VCR 2.9.3

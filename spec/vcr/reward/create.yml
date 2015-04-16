@@ -7,18 +7,14 @@ http_interactions:
       encoding: UTF-8
       string: '{"reward":{"name":"Macys Coupon","description":"50% off"}}'
     headers:
+      Authorization:
+      - Token token="88480333.72fd96a2e4c9c2a9129f96a21bfb7012"
       User-Agent:
       - Faraday v0.8.9
       Content-Type:
       - application/json
       Accept:
       - application/vnd.heyook.v1
-      Content-Digest:
-      - b1aff9a8de29c7d87c19bb428d88d920
-      Date:
-      - Mon, 13 Apr 2015 18:45:05 GMT
-      Authorization:
-      - EyHmac 88480333:s5L5Wa+qNs9NnQgE0hXKYzDzo34rd8Nq+8FTAojg2y4=
   response:
     status:
       code: 201
@@ -33,25 +29,25 @@ http_interactions:
       content-type:
       - application/json; charset=utf-8
       etag:
-      - W/"db0bad97859f3a50ec48b98b2b993b9d"
+      - W/"3c2c141c7030902cbc6c59fc018a98aa"
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 5573fe20-5b7f-4bdc-87c0-49974565cb6e
+      - aed05d93-0c1e-4e0c-a4d8-6b5ba571be85
       x-runtime:
-      - '0.157084'
+      - '0.163518'
       server:
       - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
       date:
-      - Mon, 13 Apr 2015 18:45:05 GMT
+      - Thu, 16 Apr 2015 22:22:32 GMT
       content-length:
-      - '74'
+      - '91'
       connection:
       - close
     body:
       encoding: UTF-8
-      string: '{"reward":{"id":1,"name":"Macys Coupon","cost":0,"description":"50%
-        off"}}'
+      string: '{"reward":{"id":3,"name":"Macys Coupon","cost":0,"description":"50%
+        off","image_url":null}}'
     http_version: 
-  recorded_at: Mon, 13 Apr 2015 18:45:05 GMT
+  recorded_at: Thu, 16 Apr 2015 22:22:32 GMT
 recorded_with: VCR 2.9.3

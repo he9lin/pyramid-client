@@ -7,16 +7,14 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     headers:
+      Authorization:
+      - Token token="88480333.72fd96a2e4c9c2a9129f96a21bfb7012"
       User-Agent:
       - Faraday v0.8.9
       Content-Type:
       - application/json
       Accept:
       - application/vnd.heyook.v1
-      Date:
-      - Mon, 13 Apr 2015 18:49:33 GMT
-      Authorization:
-      - EyHmac 88480333:15xdekIVHEGmoxEnf7wdWv6xjiHa8dLhI50cKjCQVOU=
   response:
     status:
       code: 200
@@ -31,25 +29,25 @@ http_interactions:
       content-type:
       - application/json; charset=utf-8
       etag:
-      - W/"6566be523b5e8d1351633976d1ff3285"
+      - W/"50b974fc032ef8e86d0f4484e10d469f"
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - bbad6800-1063-42fb-967f-ac369030ec6c
+      - 7637e03a-bae5-47ca-9aad-7b7ded5497fa
       x-runtime:
-      - '0.234392'
+      - '0.031409'
       server:
       - WEBrick/1.3.1 (Ruby/2.0.0/2013-11-22)
       date:
-      - Mon, 13 Apr 2015 18:49:34 GMT
+      - Thu, 16 Apr 2015 22:22:32 GMT
       content-length:
-      - '76'
+      - '93'
       connection:
       - close
     body:
       encoding: UTF-8
       string: '{"reward":{"id":2,"name":"Apple Coupon","cost":100,"description":"20%
-        off"}}'
+        off","image_url":null}}'
     http_version: 
-  recorded_at: Mon, 13 Apr 2015 18:49:34 GMT
+  recorded_at: Thu, 16 Apr 2015 22:22:32 GMT
 recorded_with: VCR 2.9.3

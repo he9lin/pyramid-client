@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe Pyramid::EntityAction do
+  let(:entity_action_id) { 4 }
+
   context 'RESTful' do
     it 'create' do
       VCR.use_cassette 'entity_action/create' do
@@ -12,7 +14,6 @@ describe Pyramid::EntityAction do
 
     it 'show' do
       VCR.use_cassette 'entity_action/show' do
-        entity_action_id = 2 # fixture id
         action = described_class.find entity_action_id
         expect(action).to be_persisted
         expect(action.name).to eq('retweet')
@@ -21,7 +22,6 @@ describe Pyramid::EntityAction do
 
     it 'update' do
       VCR.use_cassette 'entity_action/update' do
-        entity_action_id = 2 # fixture id
         action = described_class.find entity_action_id
         action.name = 'retweet-2'
         action.save
@@ -31,7 +31,6 @@ describe Pyramid::EntityAction do
 
     it 'destroy' do
       VCR.use_cassette 'entity_action/destroy' do
-        entity_action_id = 2 # fixture id
         action = described_class.find entity_action_id
         action.destroy
       end
